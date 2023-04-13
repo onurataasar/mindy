@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { Alert, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Login from "./views/auth-views/login";
 
 export default function App() {
@@ -18,5 +18,6 @@ const styles = StyleSheet.create({
     gap: 25,
     backgroundColor: "darkorange",
     justifyContent: "center",
+    alignItems: "center",
   },
 });
