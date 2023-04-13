@@ -25,6 +25,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b7dbdb0c-32af-4c11-84c0-ebda232f2c91"
+      }
+    },
+    "owner": "omurataasar"
   }
 }

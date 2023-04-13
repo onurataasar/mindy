@@ -1,14 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { useState } from "react";
+import { Alert, StyleSheet, View } from "react-native";
+import Login from "./views/auth-views/login";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text className="text-red-500">
-        Changes you make will automatically reload.
-      </Text>
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
+      <Login />
     </View>
   );
 }
@@ -16,8 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
+    gap: 25,
+    backgroundColor: "darkorange",
     justifyContent: "center",
   },
 });
