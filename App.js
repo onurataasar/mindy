@@ -1,23 +1,23 @@
-import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import Home from "./views/app-views/home";
 import Login from "./views/auth-views/login";
+import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar style="dark" />
-      <Login />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" options={{ headerShown: false }}>
+          {(props) => <Login {...props} />}
+        </Stack.Screen>
+        <Stack.Screen name="Home">
+          {(props) => <Home {...props} />}
+        </Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    gap: 25,
-    backgroundColor: "darkorange",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
+export default App;
