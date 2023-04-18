@@ -11,6 +11,7 @@ import {
   Vibration,
   View,
 } from "react-native";
+import TextCustom from "../../../components/TextCustom";
 
 const Login = ({ navigation }) => {
   return (
@@ -20,16 +21,11 @@ const Login = ({ navigation }) => {
           source={require("../../../assets/images/welcome.png")}
           className="w-32 object-contain h-32"
         />
-        <Text
-          style={{
-            fontFamily: "source-sans",
-          }}
-          className="text-4xl font-bold text-white"
-        >
+        <TextCustom textClassName={"text-4xl text-red-500  font-bold"}>
           MINDY
-        </Text>
+        </TextCustom>
       </View>
-      <View className="flex flex-col items-center gap-4 w-2/3">
+      <View className="flex flex-col items-center gap-4 w-full">
         <TextInput
           className="w-full pl-2 border border-amber-400 py-3 rounded-md bg-orange-300 drop-shadow-xl"
           placeholder="📧 E-mail"
@@ -42,21 +38,21 @@ const Login = ({ navigation }) => {
           passwordRules={"required: upper; required: lower; required: digit;"}
           secureTextEntry={true}
         />
-        <Text
+        <TextCustom
           onPress={() => Vibration.vibrate(500)}
-          className="text-white font-light text-sm self-end "
+          textClassName="text-white font-light text-sm self-end "
         >
           Forgot password?
-        </Text>
+        </TextCustom>
       </View>
       <View className="flex justify-between gap-4 flex-row">
         <Pressable
           onPress={() => navigation.navigate("Home")}
-          className="bg-red-500 px-11 flex items-center py-2 rounded-md border-red-600  border-2 shadow-2xl shadow-pink-400"
+          className="bg-red-500 w-full flex items-center py-4 rounded-md border-red-600  border-2 shadow-2xl shadow-pink-400"
         >
-          <Text className="text-white font-light text-lg">
+          <TextCustom textClassName={"text-white font-light text-sm"}>
             Sign in with E-mail
-          </Text>
+          </TextCustom>
         </Pressable>
       </View>
     </View>
@@ -70,6 +66,7 @@ const styles = StyleSheet.create({
     backgroundColor: "darkorange",
     alignItems: "center",
     justifyContent: "center",
+    paddingHorizontal: 25,
   },
 });
 

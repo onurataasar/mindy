@@ -49,7 +49,7 @@ function TabBar({ state, descriptors, navigation }) {
               alignItems: "center",
             }}
           >
-            <Text style={{ color: isFocused ? "#673ab7" : "#222" }}>
+            <Text key={label} style={{ color: isFocused ? "#673ab7" : "#222" }}>
               {label}
             </Text>
           </TouchableOpacity>

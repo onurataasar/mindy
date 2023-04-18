@@ -19,9 +19,9 @@ const App = () => {
           name="Login"
           options={{
             headerShown: false,
-            tabBarLabel: "Home",
+            tabBarLabel: "Login",
             tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="home" color={color} size={size} />
+              <MaterialCommunityIcons name="login" color={color} size={size} />
             ),
           }}
         >
