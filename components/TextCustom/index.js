@@ -15,7 +15,9 @@ const TextCustom = ({ children, textClassName }) => {
 }} */
 
 const styles = StyleSheet.create({
-  text: {},
+  text: {
+    fontFamily: "Alata",
+  },
 });
 
 export default TextCustom;
